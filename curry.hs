@@ -16,10 +16,12 @@ type c = (e -> f)
 
 -- Why practice these type signature expansion and reduction ?
 -- I still have not properly integrated higher order function and currying.
--- I am also curious if a more general function than (.) could do the same work.
+-- I am also curious if a more general function than `(.)` could do the same work.
 type e = (a -> b)
 type f = (b -> c)
 type g = (a -> c)
 (?) :: f -> e -> g
 type i = (e -> g)
 (?) :: f -> i
+-- I guess it may have something to do with some free theorem and proves impossible.
+-- As in `(?)` does not know what `f` is, neither what `i` is. And so can not operate on them.
